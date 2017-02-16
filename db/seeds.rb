@@ -5,6 +5,10 @@ require 'random_data'
   Advertisement.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, price: RandomData.random_number)
 end
 
+20.times do
+  Question.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, resolved: false)
+end
+
 50.times do
   Post.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph)
 end
@@ -30,3 +34,4 @@ puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
 puts "#{Advertisement.count} advertisements created"
+puts "#{Question.count} questions created"
