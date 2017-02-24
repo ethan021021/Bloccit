@@ -33,3 +33,6 @@ gem 'turbolinks'
 
 # Bootstrap template so we can write pretty HTML
 gem 'bootstrap-sass'
+
+# Used for encrypting User passwords
+gem 'bcrypt'
