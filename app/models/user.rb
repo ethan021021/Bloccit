@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
+
   before_save { self.email = email.downcase if email.present? }
+  before_save :split_name
 
   validates :name, length: { minimum: 1, maximum: 100}, presence: true
 
@@ -12,4 +14,14 @@ class User < ActiveRecord::Base
     length: { minimum: 3, maximum: 254 }
 
   has_secure_password
+
+  def split_name
+    if name
+      name_array = []
+      name.split.each do |n|
+        name_array << n.capitalize
+      end
+      self.name = name_array.join(' ')
+    end
+  end
 end
