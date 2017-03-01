@@ -25,9 +25,9 @@ RSpec.describe User, type: :model do
 
   describe "split name" do
     it "should split the two strings" do
-      user.name = "ethan thomas"
+      user.name = "bloccit user"
       user.save
-      expect(user.name).to eq "Ethan Thomas"
+      expect(user.name).to eq "Bloccit User"
     end
   end
 
