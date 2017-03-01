@@ -23,7 +23,7 @@
       </div>
     <% end %>
   </div>
-  <% if @sponsored %>
+  <!-- <% if @sponsored %> -->
     <div class="col-md-8">
       <h2>Sponsored</h2>
       <% @sponsored.topic.sponsored_posts.each do |s| %>
@@ -40,7 +40,7 @@
         </div>
       <% end %>
     </div>
-  <% end %>
+  <!-- <% end %> -->
   <div class="col-md-4">
     <%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
     <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this topic?' } %>

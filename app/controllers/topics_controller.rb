@@ -5,6 +5,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
+    # @sponsored = SponsoredPost.where(:topic_id => params[:id])
   end
 
   def edit
