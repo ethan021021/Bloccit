@@ -5,9 +5,6 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    if SponsoredPost.exists?(:id => params[:id])
-      @sponsored = SponsoredPost.find(params[:id])
-    end
   end
 
   def edit
