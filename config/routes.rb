@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :posts
 
+  post 'confirm' => 'users#confirm'
+
   get 'about' => 'welcome#about'
 
   get 'contact' => 'welcome#contact'
